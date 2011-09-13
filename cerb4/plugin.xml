@@ -1,0 +1,20 @@
+<!DOCTYPE plugin SYSTEM "../../libs/devblocks/plugin.dtd">
+<plugin>
+	<id>wgm.header_filters</id>
+	<name>WGM Custom Dev: Header to Custom Field Filters</name>
+	<description>Custom plugin for Cerberus helpdesk that imports email headers values into custom fields.</description>
+	<author>WebGroup Media, LLC.</author>
+	<revision>1</revision>
+	<link>http://wiki.cerb4.com/wiki/Plugin:Header_Filters</link>	
+	<extensions>
+		<extension point="cerberusweb.mail_filter.action">
+			<id>wgm.header_filters.action.copy</id>
+			<name>Action: Copy Header Value to Custom Field</name>
+			<class>
+				<file>plugin.php</file>
+				<name>HeaderFilterCopyAction</name>
+			</class>
+			<params/>
+		</extension>
+	</extensions>
+</plugin>
